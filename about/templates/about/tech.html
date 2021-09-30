@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+  {% comment %} Колонки с отступом сверху и снизу {% endcomment %}
+  <div class="row">
+    <h2>Вот что я умею:</h2>
+    {% comment %}
+      Боковой блок со списком технологий
+      Займет всю ширину блока на мобильном
+      и 25% при размерах экрана ≥768px
+    {% endcomment %}
+    <aside class="col-12 col-md-3">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          Python 3.X
+        </li>
+        <li class="list-group-item">
+          Django
+        </li>
+        <li class="list-group-item">
+          Git/GitHub
+        </li>
+        <li class="list-group-item">
+          Docker
+        </li>
+        <li class="list-group-item">
+          Linux/Bash
+        </li>
+        <li class="list-group-item">
+          SSH/Putty/MobaXtream
+        </li>
+        <li class="list-group-item">
+          RegExp
+        </li>
+        <li class="list-group-item">
+          PyCharm
+        </li>
+      </ul>
+    </aside>
+    {% comment %}
+      Статья
+      Займет всю ширину блока на мобильном
+      и 75% при размерах экрана ≥768px
+    {% endcomment %}
+    <article class="col-12 col-md-9">
+      <p>При разработке данного сайта, ни один программист не пострадал.</p>
+    </article>
+  </div>
+{% endblock %}

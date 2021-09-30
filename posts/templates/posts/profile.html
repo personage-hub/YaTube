@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ author.get_full_name }}{% endblock %}
+{% block header %}Посты пользователя {{ author.get_full_name }}{% endblock %}
+{% load thumbnail %}
+{% block content %}
+  <div class="row">
+    <div class="col-md-3 mb-3 mt-1">
+      {% include "posts/includes/sidecard.html" %}
+    </div>
+    <div class="col-md-9">
+      {% for post in page %}
+        {% include "posts/includes/post_item.html" with post=post %}
+      {% endfor %}
+    {% include "includes/paginator.html" with items=page paginator=paginator%}
+    </div>
+  </div>
+
+{% endblock %}
